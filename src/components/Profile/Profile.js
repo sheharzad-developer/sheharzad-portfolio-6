@@ -1,12 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
-import { Typography, makeStyles, Box, Paper, Button, Container, Grid } from '@material-ui/core';
+import { Typography, makeStyles, Box, Paper, Button, Container, Grid, Link } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-
 import './Profile.css'
 
 
@@ -228,16 +227,18 @@ const Profile = (props) => {
                                         <ul className={classes.ulInline}>
                                             <li className={classes.liPadding}><FacebookIcon className={classes.facebookIcon} /></li>
                                             <li className={classes.liPadding}><InstagramIcon className={classes.instagramIcon} /></li>
-                                            <li className={classes.liPadding}><LinkedInIcon className={classes.linkedInIcon} /></li>
+                                            <li className={classes.liPadding}><Link href="https://www.linkedin.com/in/sheharzad-salahuddin/" ><LinkedInIcon className={classes.linkedInIcon} /></Link></li>
                                             <li className={classes.liPadding}><TwitterIcon className={classes.twitterIcon} /></li>
                                         </ul>
                                     </Box>
                                 </div>
                             </div>
                             <div className={classes.styleWidth}>
-                                <Button className={classes.styleButton}>
-                                    Get in touch
-                                </Button>
+                                <Link>
+                                    <Button className={classes.styleButton}>
+                                        Get in touch
+                                    </Button>
+                                </Link>
                             </div>
                         </Box>
                     </Grid>
