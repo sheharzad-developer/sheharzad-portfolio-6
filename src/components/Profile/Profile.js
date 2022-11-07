@@ -225,10 +225,10 @@ const Profile = (props) => {
 
                                     <Box>
                                         <ul className={classes.ulInline}>
-                                            <li className={classes.liPadding}><FacebookIcon className={classes.facebookIcon} /></li>
-                                            <li className={classes.liPadding}><InstagramIcon className={classes.instagramIcon} /></li>
+                                            <li className={classes.liPadding}><Link href="https://www.facebook.com/s.ssalahuddin2/"><FacebookIcon className={classes.facebookIcon} /></Link></li>
+                                            <li className={classes.liPadding}><Link href="https://www.instagram.com/sheharzad.salahuddin80/"><InstagramIcon className={classes.instagramIcon} /></Link></li>
                                             <li className={classes.liPadding}><Link href="https://www.linkedin.com/in/sheharzad-salahuddin/" ><LinkedInIcon className={classes.linkedInIcon} /></Link></li>
-                                            <li className={classes.liPadding}><TwitterIcon className={classes.twitterIcon} /></li>
+                                            <li className={classes.liPadding}><Link href="https://twitter.com/sheharzad_salah" ><TwitterIcon className={classes.twitterIcon} /></Link></li>
                                         </ul>
                                     </Box>
                                 </div>
