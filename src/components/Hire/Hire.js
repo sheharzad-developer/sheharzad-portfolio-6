@@ -1,13 +1,18 @@
+/* eslint-disable no-dupe-keys */
 /* eslint-disable no-lone-blocks */
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-unused-vars */
 import React, { Component, useRef } from 'react'
-import { Typography, makeStyles, Container, TextField, TextareaAutosize, Button, Input, Box, Grid } from '@material-ui/core';
+import { Typography, makeStyles, Container, TextField, TextareaAutosize, Button, Input, Box, Grid, Link } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import { styled } from '@mui/material/styles';
 import emailjs from '@emailjs/browser';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import './Hire.css'
 
 const style = makeStyles(theme => ({
@@ -132,7 +137,7 @@ const style = makeStyles(theme => ({
     }
   },
   HireImg: {
-    width: '580px',
+    width: '573px',
     height: '612.63px',
     objectFit: 'contain',
     [theme.breakpoints.down('lg')]: {
@@ -167,7 +172,134 @@ const style = makeStyles(theme => ({
     LeftForm: {
       float: 'left'
     },
-  }
+  },
+  IconLi: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%',
+    paddingTop: '50px',
+    justifyContent: 'flex-start'
+  },
+  li: {
+    padding: '0 30px 0 0',
+    [theme.breakpoints.down('lg')]: {
+      padding: '0 30px 0 0',
+    },
+    [theme.breakpoints.down('md')]: {
+      padding: '0 30px 0 0',
+    },
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 24px 0 0',
+    }
+  },
+  facebookIcon: {
+    width: '50px',
+    height: '50px',
+    lineHeight: '47px',
+    fontSize: '16px',
+    color: '#fff',
+    borderRadius: '100%',
+    textAlign: 'center',
+    border: '2px solid #fff',
+    padding: '10px 10px',
+    '&:hover': {
+      backgroundColor: '#F9004D',
+      transition: '1s',
+    },
+    [theme.breakpoints.down('lg')]: {
+      width: '20px !important',
+      height: '20px !important'
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '30px',
+      height: '30px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '30px',
+      height: '30px',
+    }
+  },
+  instagramIcon: {
+    width: '50px',
+    height: '50px',
+    lineHeight: '47px',
+    fontSize: '16px',
+    color: '#fff',
+    borderRadius: '100%',
+    textAlign: 'center',
+    border: '2px solid #fff',
+    padding: '10px 10px',
+    '&:hover': {
+      backgroundColor: '#F9004D',
+      transition: '1s',
+    },
+    [theme.breakpoints.down('lg')]: {
+      width: '20px !important',
+      height: '20px !important'
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '30px',
+      height: '30px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '30px',
+      height: '30px',
+    }
+  },
+  linkedInIcon: {
+    width: '50px',
+    height: '50px',
+    lineHeight: '47px',
+    fontSize: '16px',
+    color: '#fff',
+    borderRadius: '100%',
+    textAlign: 'center',
+    border: '2px solid #fff',
+    padding: '10px 10px',
+    '&:hover': {
+      backgroundColor: '#F9004D',
+      transition: '1s',
+    },
+    [theme.breakpoints.down('lg')]: {
+      width: '20px !important',
+      height: '20px !important'
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '30px',
+      height: '30px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '30px',
+      height: '30px',
+    }
+  },
+  twitterIcon: {
+    width: '50px',
+    height: '50px',
+    lineHeight: '47px',
+    fontSize: '16px',
+    color: '#fff',
+    borderRadius: '100%',
+    textAlign: 'center',
+    border: '2px solid #fff',
+    padding: '10px 10px',
+    '&:hover': {
+      backgroundColor: '#F9004D',
+      transition: '1s',
+    },
+    [theme.breakpoints.down('lg')]: {
+      width: '20px !important',
+      height: '20px !important'
+    },
+    [theme.breakpoints.down('md')]: {
+      width: '30px',
+      height: '30px',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '30px',
+      height: '30px',
+    }
+  },
 }))
 
 const Hire = (props) => {
@@ -188,7 +320,7 @@ const Hire = (props) => {
   };
   const classes = style()
   return (
-    <div className={classes.HireBackground}>
+    <div className={classes.HireBackground} id="hireSection">
       <Container>
         <div className={classes.box}>
           <Box>
@@ -205,11 +337,17 @@ const Hire = (props) => {
                 <Button className={classes.SendButton} type='submit'>Send a Message</Button>
               </form>
             </div>
+            <ul className={classes.IconLi}>
+              <li className={classes.li}><Link href="https://www.facebook.com/s.ssalahuddin2/"><FacebookIcon className={classes.facebookIcon} /></Link></li>
+              <li className={classes.li}><Link href="https://www.instagram.com/sheharzad.salahuddin80/"><InstagramIcon className={classes.instagramIcon} /></Link></li>
+              <li className={classes.li}><Link href="https://www.linkedin.com/in/sheharzad-salahuddin/"><LinkedInIcon className={classes.linkedInIcon} /></Link></li>
+              <li className={classes.li}><Link href="https://twitter.com/sheharzad_salah"><TwitterIcon className={classes.twitterIcon} /></Link></li>
+            </ul>
           </Box>
 
           <Box>
             <div className={classes.HireImgBox}>
-              <img className={classes.HireImg} src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+              <img className={classes.HireImg} />
             </div>
           </Box>
         </div>
@@ -219,3 +357,5 @@ const Hire = (props) => {
 }
 
 export default Hire;
+
+// src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
